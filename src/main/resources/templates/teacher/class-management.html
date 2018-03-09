@@ -1,0 +1,32 @@
+<section class="wrapper site-min-height" xmlns:th="http://www.w3.org/1999/xhtml">
+    <h3><i class="fa fa-angle-right"></i> 班级管理</h3>
+    <div class="row mt">
+        <div class="col-lg-12">
+            <div class="content-panel">
+                <h4><i class='fa fa-angle-right' th:text="''+ ${class_info.class_name}"> {班级名}</i></h4>
+                <section id="no-more-tables">
+                    <table class="table table-bordered table-striped table-condensed cf">
+                        <thead class="cf">
+                        <tr>
+                            <th>学号</th>
+                            <th>姓名</th>
+                            <th>班级编号</th>
+                            <th>班级</th>
+                            <th>指导教师</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr th:id="${student_info.student_id}" th:each="student_info:${student_info}">
+                            <td data-title="学号" th:text="${student_info.student_id}">{学号}</td>
+                            <td data-title="姓名" th:text="${student_info.name}">{姓名}</td>
+                            <td data-title="班级编号" th:text="${class_info.class_id}">{班级编号}</td>
+                            <td data-title="班级" th:text="${class_info.class_name}">{班级}</td>
+                            <td data-title="指导教师" th:text="${class_info.teacher_id_fk.name}">{指导教师}</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </section>
+            </div><!-- /content-panel -->
+        </div><!-- /col-lg-12 -->
+    </div><!-- /row -->
+</section>

@@ -1,0 +1,38 @@
+<ul class="sidebar-menu" id="nav-accordion" xmlns:th="http://www.w3.org/1999/xhtml">
+    <!--用户头像-->
+    <p class="centered"><a><img src="img/ui-sam.jpg" class="img-circle" width="60"></a></p>
+    <!--用户名-->
+    <h5 class="centered" th:text="${teacher_info.name}">{姓名}</h5>
+    <!--菜单栏(首个)-->
+    <li class="mt">
+        <a href="javascript:void(0);" onclick="getHomepage()">
+            <i class="fa fa-user"></i>
+            <span>首页</span>
+        </a>
+    </li>
+    <!--菜单栏(项目)-->
+    <li class="sub-menu dcjq-parent-li">
+        <a href="javascript:;" class="dcjq-parent">
+            <i class="fa fa-users"></i>
+            <span>班级管理</span>
+            <span class="dcjq-icon"></span></a>
+        <!--菜单栏(下拉)-->
+        <ul class="sub" style="display: none;">
+            <!--下拉项目-->
+            <li th:each="class_info:${class_info}"><a href="javascript:void(0);" onclick="getClasspage(this)" th:id="${class_info.class_id}" th:text="${class_info.class_name}">{班级}</a></li>
+        </ul>
+    </li>
+    <li>
+        <a href="javascript:void(0);" onclick="getQuestionpage()">
+            <i class="fa fa-file-text"></i>
+            <span>题目管理</span>
+        </a>
+    </li>
+    <li>
+        <a href="javascript:void(0);" onclick="getListspage()">
+            <i class="fa fa-book">
+                <span>作业管理</span>
+            </i>
+        </a>
+    </li>
+</ul>

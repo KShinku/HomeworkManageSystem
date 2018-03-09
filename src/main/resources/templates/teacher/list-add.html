@@ -1,0 +1,68 @@
+<section class="wrapper site-min-height" xmlns:th="http://www.w3.org/1999/xhtml">
+    <h3><i class="fa fa-angle-right"></i> 作业管理</h3>
+    <div class="row mt">
+        <!--主栏目:作业集信息-->
+        <div class="col-lg-9">
+            <div class="form-panel" style="margin: 0px;padding-right: 20px;padding-left: 20px;">
+                <h4 class="mb"><i class="fa fa-angle-right"></i> 添加题目集</h4>
+                <form class="form-horizontal style-form">
+                    <!--题目集标题-->
+                    <div class="form-group">
+                        <label class="col-lg-2 col-sm-2 control-label">题目集名称</label>
+                        <div class="col-lg-10">
+                            <input id="list_name" type="text" class="form-control">
+                        </div>
+                    </div>
+                    <!--描述-->
+                    <div class="form-group">
+                        <label class="col-sm-2 col-sm-2 control-label">描述</label>
+                        <div class="col-sm-10">
+                            <textarea id="description" class="form-control submit"></textarea>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 col-sm-2 control-label">班级</label>
+                        <div class="col-sm-10">
+                            <select id="class_id" class="form-control">
+                                <option value="null">不选择任何班级</option>
+                                <!--循环显示-->
+                                <option th:each="class_info:${class_info}" th:value="${class_info.class_id}" th:text="${class_info.class_name}">{班级}</option>
+                            </select>
+                        </div>
+                    </div>
+                    <!--提交-->
+                    <div class="form-group">
+                        <label class="col-sm-2 col-sm-2 control-label"></label>
+                        <div class="col-sm-10">
+                            <button type="button" class="btn btn-primary" onclick="addList()">提交</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!--侧栏目:选择题目-->
+        <div class="col-lg-3">
+            <div class="content-panel">
+                <h4><i class="fa fa-angle-right"></i> 选择题目</h4>
+                <hr>
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th>#</th>
+                        <th><i class="fa fa-file-text "></i> Title</th>
+                        <th></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <!--循环显示题目-->
+                    <tr th:each="question_info:${question_info}">
+                        <td th:text="${question_info.question_id}">{题目编号}</td>
+                        <td th:text="${question_info.title}">{题目}</td>
+                        <td><input type="checkbox" name="question_id" th:value="${question_info.question_id}"></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</section>

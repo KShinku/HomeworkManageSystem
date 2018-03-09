@@ -1,0 +1,124 @@
+<section class="wrapper site-min-height" xmlns:th="http://www.w3.org/1999/xhtml">
+    <div class="row">
+    <!--主栏目-->
+    <div class="col-lg-9 main-chart">
+        <h3><i class="fa fa-angle-right"></i> 是时候展现真正的作业了！</h3>
+        <div class="row mt">
+            <div class="col-md-12">
+                <div class="form-panel">
+                    <form class="form-horizontal style-form">
+                        <h4 class="mb"><i class="fa fa-angle-right"></i> 个人信息</h4>
+                        <div class="form-group">
+                            <label class="col-lg-2 col-sm-2 control-label">学号</label>
+                            <div class="col-lg-10">
+                                <p class="form-control-static" th:text="${student_info.student_id}">{放学号}</p>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-lg-2 col-sm-2 control-label">姓名</label>
+                            <div class="col-lg-10">
+                                <p class="form-control-static" th:text="${student_info.name}">{放名字}</p>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-lg-2 col-sm-2 control-label">班级</label>
+                            <div class="col-lg-10">
+                                <p class="form-control-static" th:text="${class_info.class_name}">{放班级}</p>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-lg-2 col-sm-2 control-label">指导老师</label>
+                            <div class="col-lg-10">
+                                <p class="form-control-static" th:text="${teacher_info.name}">{放老师名字}</p>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--侧栏目-->
+    <div class="col-lg-3 ds">
+        <h3>近期作业</h3>
+
+        <div class="desc">
+            <div class="thumb">
+                <span class="badge bg-theme"><i class="fa fa-clock-o"></i></span>
+            </div>
+            <div class="details">
+                <p>
+                    <muted>1分钟前</muted><br/>
+                    发布了一百份作业<br/>
+                </p>
+            </div>
+        </div>
+        <div class="desc">
+            <div class="thumb">
+                <span class="badge bg-theme"><i class="fa fa-clock-o"></i></span>
+            </div>
+            <div class="details">
+                <p>
+                    <muted>1小时前</muted><br/>
+                    发布了两百份作业<br/>
+                </p>
+            </div>
+        </div>
+        <div class="desc">
+            <div class="thumb">
+                <span class="badge bg-theme"><i class="fa fa-clock-o"></i></span>
+            </div>
+            <div class="details">
+                <p>
+                    <muted>1天前</muted><br/>
+                    发布了一千份作业<br/>
+                </p>
+            </div>
+        </div>
+        <div class="desc">
+            <div class="thumb">
+                <span class="badge bg-theme"><i class="fa fa-clock-o"></i></span>
+            </div>
+            <div class="details">
+                <p>
+                    <muted>1周前</muted><br/>
+                    发布了你们写不完的作业<br/>
+                </p>
+            </div>
+        </div>
+        <h3>同班同学</h3>
+        <div class="desc">
+            <div class="thumb">
+                <span class="badge bg-theme"><i class="fa fa-user"></i></span>
+            </div>
+            <div class="details">
+                <p>
+                    <a href="#">叶晨立</a><br/>
+                    <muted>再写作业我是狗</muted><br/>
+                </p>
+            </div>
+        </div>
+        <div class="desc">
+            <div class="thumb">
+                <span class="badge bg-theme"><i class="fa fa-user"></i></span>
+            </div>
+            <div class="details">
+                <p>
+                    <a href="#">何辉</a><br/>
+                    <muted>狗才写作业</muted><br/>
+                </p>
+            </div>
+        </div>
+        <div class="desc">
+            <div class="thumb">
+                <span class="badge bg-theme"><i class="fa fa-user"></i></span>
+            </div>
+            <div class="details">
+                <p>
+                    <a href="#">楼兴涛</a><br/>
+                    <muted>大家静一静，我有话要讲</muted><br/>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+</section>

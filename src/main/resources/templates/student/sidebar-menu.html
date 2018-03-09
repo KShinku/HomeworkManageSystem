@@ -1,0 +1,21 @@
+<ul class="sidebar-menu" id="nav-accordion" xmlns:th="http://www.w3.org/1999/xhtml">
+    <!--用户头像-->
+    <p class="centered"><a><img src="img/ui-sam.jpg" class="img-circle" width="60"></a></p>
+    <!--用户名-->
+    <h5 class="centered" th:text="${student_info.name}">{咸鱼}</h5>
+    <!--菜单栏(首个)-->
+    <li class="mt">
+        <a href="javascript:void(0);" onclick="getHomepage()">
+            <i class="fa fa-user"></i>
+            <span>首页</span>
+        </a>
+    </li>
+    <!--菜单栏(项目)-->
+    <li>
+        <a href="javascript:void(0);" onclick="getHomework()">
+            <i class="fa fa-book">
+                <span>作业集</span>
+            </i>
+        </a>
+    </li>
+</ul>

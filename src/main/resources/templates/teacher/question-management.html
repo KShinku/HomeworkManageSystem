@@ -1,0 +1,41 @@
+<section class="wrapper site-min-height" xmlns:th="http://www.w3.org/1999/xhtml">
+    <h3><i class="fa fa-angle-right"></i> 题目管理</h3>
+    <div class="row mt">
+        <div class="col-md-12">
+            <div class="content-panel">
+                <table class="table table-striped table-advance table-hover">
+                    <thead>
+                    <tr>
+                        <th>#</th>
+                        <th><i class="fa fa-file-text "></i> Title</th>
+                        <th class="hidden-phone"><i class="fa fa-question-circle"></i> Descrition</th>
+                        <th></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <!--循环显示题目-->
+                    <tr th:each="question:${question_info}">
+                        <td th:text="${question.question_id}">{编号}</td>
+                        <td th:text="${question.title}">{题目}</td>
+                        <td class="hidden-phone" th:text="${question.description}">{描述}</td>
+                        <td>
+                            <button class="btn btn-primary btn-xs" onclick="getEditQuestionpage(this)" th:id="${question.question_id}" ><i class="fa fa-pencil"></i></button>
+                            <button class="btn btn-danger btn-xs" onclick="deleteQuestion(this)" th:id="${question.question_id}"><i class="fa fa-trash-o "></i></button>
+                        </td>
+                    </tr>
+                    <!--添加题目-->
+                    <tr>
+                        <td>{编号}</td>
+                        <td>{题目}</td>
+                        <td class="hidden-phone">{描述}</td>
+                        <td>
+                            <button class="btn btn-success btn-xs" onclick="getAddQuestionpage()"><i class="fa fa-plus"></i></button>
+                        </td>
+                    </tr>
+
+                    </tbody>
+                </table>
+            </div><!-- /content-panel -->
+        </div><!-- /col-md-12 -->
+    </div><!-- /row -->
+</section>
