@@ -3,4 +3,4 @@
 
 SpringBootDemo/SpringMVC+Spring+Spring Data JPA(hibernate)
 
-前端找了一些现成的网页和素材……侵删
+前端找了一些现成的网页和素材，非商业用途，如有侵权请告知，将及时删除。
